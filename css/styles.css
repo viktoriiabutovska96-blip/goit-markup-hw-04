@@ -39,6 +39,10 @@ ol {
 
 .header {
     border-bottom: 1px solid #E7E9FC;
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -66,6 +70,10 @@ ol {
 
 .header-navigation-link {
     padding: 24px 0;
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .main-title {
@@ -173,6 +181,7 @@ ol {
     font-size: 20px;
     color: #2e2f42;
     margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 .section-features-list-item-text {
@@ -237,13 +246,13 @@ ol {
     position: relative;
     overflow: hidden;
 }
-
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    padding: 40px 32px;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
     background-color: #4D5AE5;
@@ -263,6 +272,8 @@ ol {
 }
 
 .section-portfolio-list-item {
+    position: relative;
+    overflow: hidden;
     width: 360px;
     height: 420px;
     transition-property: box-shadow;
@@ -278,6 +289,9 @@ ol {
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.section-portfolio-list-item:hover .overlay {
+    transform: translateY(0);
+}
 .section-portfolio-list {
     display: flex;
     column-gap: 24px;
@@ -339,6 +353,9 @@ ol {
         0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.header-navigation-link.current {
+    color: #2e2f42;
+}
 .header-navigation-link.current::after {
     content: "";
     position: absolute;
@@ -349,6 +366,11 @@ ol {
     background-color: #404BBF;
     border-radius: 2px;
     
+}
+
+.header-navigation-link.current:hover,
+.header-navigation-link.current:focus {
+ color: #404BBF;
 }
 
 .header-navigation-link:hover,
@@ -418,6 +440,8 @@ ol {
     background-color: #2E2F42;
     padding-top: 188px;
     padding-bottom: 188px;
+    max-width: 1440px;
+    margin: 0 auto;
     background-image: linear-gradient(
         to right,
         rgba(46, 47, 66, 0.7),
@@ -425,7 +449,7 @@ ol {
         url("../images/hero_image.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1440px;
+    background-size: cover;
 }
 
 .footer {
@@ -467,7 +491,7 @@ ol {
 .footer-container-main {
     display: flex;
     align-items: baseline;
-    gap: 70px;
+    gap: 120px;
 }
 
 .social-links-title {
@@ -495,14 +519,24 @@ ol {
     list-style-type: none;
 }
 
-.social-media-link {
+.social-media-link-team {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0s;
 }
 
+.social-media-link-team:hover,
+.social-media-link-team:focus {
+    background-color: #404bbf;
+}
 .social-links {
     fill: #FFFFFF;
 }
@@ -529,39 +563,43 @@ img {
 }
 
 .social-links {
-    fill: #4D5AE5;
-    stroke: #f4f4fd;
+    fill: #f4f4fd;
+    stroke: #404BBF;
     display: flex;
     row-gap: 24px;
     flex-wrap: wrap;
+   
+}
+
+.social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0s;
-    background-color: #4D5AE5;
-    border-radius: 50%;
 }
-
-.social-links:hover,
-.social-links:focus {
-    fill: #31D0AA;
+.social-media-link:hover,
+.social-media-link:focus {
     background-color: #31d0aa;
 }
 
 .social-links-team {
-    fill: #4D5AE5;
-    stroke: #f4f4fd;
+    fill: #f4f4fd;
+    stroke: #404BBF;
     display: flex;
     row-gap: 24px;
     flex-wrap: wrap;
-    background-color: #4D5AE5;
-    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    transition: fill 250ms ease;
+  
 }
-.social-links-team:hover,
-.social-links-team:focus {
- background-color: #404bbf;
-}
-
 
 .container-footer-social-links {
     display: flex;
