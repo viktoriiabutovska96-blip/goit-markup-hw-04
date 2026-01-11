@@ -146,6 +146,8 @@ ol {
     width: 264px;
     height: 112px;
     background-color: #F4F4FD;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
 }
 
 .icon {
@@ -243,7 +245,7 @@ ol {
     width: 100%;
     height: 100%;
     transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ease-in-out;
     background-color: #4D5AE5;
 }
 
@@ -256,6 +258,7 @@ ol {
     height: 420px;
     transition-property: box-shadow;
     transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-portfolio-list-item:hover {
@@ -301,6 +304,10 @@ ol {
     width: 115px;
     height: 24px;
     margin-right: 76px;
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation-link {
@@ -312,10 +319,15 @@ ol {
     color: #2E2F42;
     position: relative;
     text-decoration: none;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation-link.current::after {
-    content: "_";
+    content: "";
     position: absolute;
     left: 0;
     bottom: -1px;
@@ -323,6 +335,7 @@ ol {
     height: 4px;
     background-color: #404BBF;
     border-radius: 2px;
+    
 }
 
 .header-navigation-link:hover,
@@ -336,6 +349,11 @@ ol {
     font-style: normal;
     text-decoration: none;
     color: #434455;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .accent {
@@ -364,6 +382,7 @@ ol {
     height: 56px;
     display: block;
     margin: 0 auto;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover,
@@ -425,6 +444,7 @@ ol {
 .container-footer-social-links {
     display: flex;
     flex-direction: column;
+    margin-left: 120px;
 }
 
 .footer-container-main {
@@ -491,6 +511,7 @@ img {
     flex-wrap: wrap;
     transition-property: fill;
     transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
